@@ -114,3 +114,29 @@ function borrarCarta(parent) {
 /////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
+let inputWidth = document.querySelector("#inputWidth");
+let inputHeight = document.querySelector("#inputHeight");
+
+inputWidth.addEventListener("keyup", event => {
+  let textWidth = event.target.value;
+  console.log(textWidth);
+
+  let card = document.querySelector(".card");
+
+  if (event.keyCode === 13) {
+    card.style.width = textWidth + "px";
+    inputWidth.value = "";
+  }
+});
+
+inputHeight.addEventListener("keyup", event => {
+  let textHeight = event.target.value;
+  console.log(textHeight);
+
+  let card = document.querySelector(".card");
+
+  if (event.keyCode === 13) {
+    card.style.height = textHeight + "px";
+    inputWidth.value = "";
+  }
+});
